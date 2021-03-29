@@ -1,0 +1,74 @@
+<loginPage>:
+    BoxLayout:
+        orientation: "horizontal"
+        BoxLayout:
+            orientation: "horizontal"
+            canvas.before:
+                Color:
+                    rgba: (1,1,1,1)
+                Rectangle:
+                    size: self.size
+                    pos:self.pos
+
+            GridLayout:
+                cols: 5
+                canvas.before:
+                    Color:
+                        rgba: (60/255,179/255,113/255, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+                BoxLayout:
+                    orientation: "vertical"
+                BoxLayout:
+                    orientation: "vertical"
+                BoxLayout:
+                    orientation: "vertical"
+                    spacing: 5
+                    Label:
+                        text: "Cicada"
+                        font_size: 40
+                    TextInput:
+                        id: username_inp
+                        background_normal: ""
+                        background_color: (47/255,79/255,79/255, 1)
+                        hint_text: "Username"
+                        size_hint_y: 0.065
+                        write_tab: False
+                        focus: True
+                        multiline: False
+                    TextInput:
+                        id: password_inp
+                        background_normal: ""
+                        background_color: (47/255,79/255,79/255, 1)
+                        hint_text: "Password"
+                        size_hint_y: 0.065
+                        password: True
+                        write_tab: False
+                        multiline: False
+                    Button:
+                        id: login_btn
+                        text: "Login"
+                        bold: True
+                        font_size: 17
+                        color: (60/255,179/255,113/255, 1)
+                        size_hint_y: 0.065
+                        size_hint_x: 0.7 
+                        pos_hint: {'x': 0.45, 'right': 0.4}
+                        background_normal: ""
+                        background_color: (47/255,79/255,79/255, 1)
+                        on_press: root.login()
+                    Label:
+                        id: disp
+                        size_hint_y: None
+                        height: 150
+                        text: ""
+                        
+
+                BoxLayout:
+                    orientation: "vertical"
+                BoxLayout:
+                    orientation: "vertical"
+
+                
